@@ -1,0 +1,67 @@
+--Pedro Simarro Guerra
+--Adrian Jarabo Navarrete
+
+---------------------------Entrega 1----------------
+
+clave de cifrado: f5609467fd7fa4d69cddee2530691565
+IV: 9e1f86a3d8641c7f2435a1ba8a4ef02d
+texto-aes-128-cbc.txt: jNgoVuX3osrnUhTiV6cnhnOOtCkOWj665xE2yFkBMWI=
+
+---------------------------Entrega 2----------------
+
+archivo texto-aes-128-cbc-1.txt: U2FsdGVkX19kdLtGUHJ7fIvlL9wVpzZvkqtxMteflJLYjWd027AtEzOE7jwcot0P
+
+---------------------------Entrega 3----------------
+
+salt=141C79FEF88731C0
+key=0D283AECD7AA024EA23C00144111DB71
+iv =613F82E89BB4FA061D797DB849F6358F
+
+archivo: U2FsdGVkX18UHHn++IcxwLbb5sTS+yN2qvXWsoFik6CmlTcYnnKOoZuSr6Js8zE6
+VFoeoBElY+KAegX3ExDnMCnfEh4zOP40avfWf78AQMVU4Bxe2tppVEtcdYRfWxfP
+
+---------------------------Entrega 4----------------
+
+salt=9C1A830CD53B17D7
+key=1EE9BB19F9CF319BB28551E8B83AB099
+
+archivo: U2FsdGVkX1+cGoMM1TsX14GmJO12w00PUbGTcpgWXZXYuZrBFmfwZi3NbH1x
+
+
+---------------------------Entrega 5----------------
+
+hosts: SHA1(hosts)= d5234cedd3184001eae464139064341046ba4afc
+
+services: SHA1(services)= 2376fab6b4405a625189fdb39d4cccf7f42cdd2d
+
+
+---------------------------Entrega 6----------------
+
+HMAC-SHA256(services)= 2e2caae0db347870222e658aea16f13be99fdb6145f5a520df860a7b73023cf4
+
+
+HMAC-SHA512(services)= 2c57b8320f6e5e92d0ec1ac632b78994ebf092e15ba318b5df31ac3834bccfb40e01a5ff6da8d965d8f01088016754f37c21fe8fcb10e3a025aa4df69ae0d55f
+
+---------------------------Entrega 6----------------
+
+jA0EAgMCfV7wbBY6jZhgyUIB0zs4CwqMCOjwKTQKt8XKRzStrQ4EHrJOQTYqFytT
+EF14lrdoNgX2D6UDvjSDlm8AStZ54xPNo7tz2Bz/5H2yaGg=
+=/j98
+
+
+---------------------------Entrega 7----------------
+
+sha256: services: 34701CC2 257605EF 10474389 1D6E621E 64518729 5BDE9544 EEB2BD8F
+          357A362E
+sha512: services: 0A3DE80B 9B54A236 125A7F1A B3FF2EBB 9DD3B0A2 7A297D88 E8E66769
+          D8846812 EB277B63 0A81C7C3 EA787987 206AAC54 C88E50B6 1D4F6663
+          B1E99E97 3AB27E2F
+
+
+
+
+
+
+
+
+
