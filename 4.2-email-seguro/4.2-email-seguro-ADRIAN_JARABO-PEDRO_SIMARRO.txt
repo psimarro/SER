@@ -1,0 +1,360 @@
+ADRIAN JARABO NAVARRETE
+PEDRO SIMARRO GUERRA
+
+---------------------------------------------
+---------------------------------------------
+
+Entrega 1
+
+usuario@mailserver:~$ telnet localhost 25
+Trying ::1...
+Connected to localhost.
+Escape character is '^]'.
+220 debian ESMTP Postfix (Debian/GNU)
+HELO mailserver.lab.ser
+250 debian
+QUIT
+221 2.0.0 Bye
+Connection closed by foreign host.
+
+---------------------------------------------
+---------------------------------------------
+
+Entrega 2
+
+usuario@mailserver:~$ telnet localhost 143
+Trying ::1...
+Connected to localhost.
+Escape character is '^]'.
+* OK [CAPABILITY IMAP4rev1 LITERAL+ SASL-IR LOGIN-REFERRALS ID ENABLE IDLE AUTH=PLAIN] Dovecot ready.
+a LOGIN benito benito
+a OK [CAPABILITY IMAP4rev1 LITERAL+ SASL-IR LOGIN-REFERRALS ID ENABLE IDLE SORT SORT=DISPLAY THREAD=REFERENCES THREAD=REFS MULTIAPPEND UNSELECT CHILDREN NAMESPACE UIDPLUS LIST-EXTENDED I18NLEVEL=1 CONDSTORE QRESYNC ESEARCH ESORT SEARCHRES WITHIN CONTEXT=SEARCH LIST-STATUS SPECIAL-USE] Logged in
+a LIST "" *
+* LIST (\HasNoChildren) "/" "INBOX"
+a OK List completed.
+a EXAMINE Trash
+a NO Mailbox doesn't exist: Trash
+a LOGOUT
+* BYE Logging out
+a OK Logout completed.
+Connection closed by foreign host.
+
+---------------------------------------------
+---------------------------------------------
+
+Entrega 3
+
+Convesarción formato Raw:
+
+220 debian ESMTP Postfix (Debian/GNU)
+EHLO host1.lab.ser
+250-debian
+250-PIPELINING
+250-SIZE 10240000
+250-VRFY
+250-ETRN
+250-ENHANCEDSTATUSCODES
+250-8BITMIME
+250 DSN
+MAIL FROM:<ana@mailserver.lab.ser> SIZE=406
+250 2.1.0 Ok
+RCPT TO:<benito@mailserver.lab.ser>
+250 2.1.5 Ok
+DATA
+354 End data with <CR><LF>.<CR><LF>
+To: benito@mailserver.lab.ser
+From: Ana Gil Molina <ana@mailserver.lab.ser>
+Subject: Hola
+Message-ID: <5ED13FD6.7020905@mailserver.lab.ser>
+Date: Fri, 29 May 2020 19:01:10 +0200
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:38.0) Gecko/20100101
+ Icedove/38.7.0
+MIME-Version: 1.0
+Content-Type: text/plain; charset=utf-8; format=flowed
+Content-Transfer-Encoding: 7bit
+
+Este correo es un saludo.
+.
+250 2.0.0 Ok: queued as 0FDB220E22
+QUIT
+221 2.0.0 Bye
+
+---------------------------------------------
+
+Conversación formato ASCII
+
+220 debian ESMTP Postfix (Debian/GNU)
+EHLO host1.lab.ser
+250-debian
+250-PIPELINING
+250-SIZE 10240000
+250-VRFY
+250-ETRN
+250-ENHANCEDSTATUSCODES
+250-8BITMIME
+250 DSN
+MAIL FROM:<ana@mailserver.lab.ser> SIZE=406
+250 2.1.0 Ok
+RCPT TO:<benito@mailserver.lab.ser>
+250 2.1.5 Ok
+DATA
+354 End data with <CR><LF>.<CR><LF>
+To: benito@mailserver.lab.ser
+From: Ana Gil Molina <ana@mailserver.lab.ser>
+Subject: Hola
+Message-ID: <5ED13FD6.7020905@mailserver.lab.ser>
+Date: Fri, 29 May 2020 19:01:10 +0200
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:38.0) Gecko/20100101
+ Icedove/38.7.0
+MIME-Version: 1.0
+Content-Type: text/plain; charset=utf-8; format=flowed
+Content-Transfer-Encoding: 7bit
+
+Este correo es un saludo.
+.
+250 2.0.0 Ok: queued as 0FDB220E22
+QUIT
+221 2.0.0 Bye
+
+---------------------------------------------
+---------------------------------------------
+
+Entrega 4
+
+Conversación encriptada y firmada en formato Raw:
+
+220 debian ESMTP Postfix (Debian/GNU)
+EHLO host1.lab.ser
+250-debian
+250-PIPELINING
+250-SIZE 10240000
+250-VRFY
+250-ETRN
+250-ENHANCEDSTATUSCODES
+250-8BITMIME
+250 DSN
+MAIL FROM:<ana@mailserver.lab.ser> SIZE=6004
+250 2.1.0 Ok
+RCPT TO:<benito@mailserver.lab.ser>
+250 2.1.5 Ok
+DATA
+354 End data with <CR><LF>.<CR><LF>
+To: benito@mailserver.lab.ser
+From: Ana Gil Molina <ana@mailserver.lab.ser>
+Subject: Entrega4
+Message-ID: <5ED145EB.9060706@mailserver.lab.ser>
+Date: Fri, 29 May 2020 19:27:07 +0200
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:38.0) Gecko/20100101
+ Icedove/38.7.0
+MIME-Version: 1.0
+Content-Type: application/pkcs7-mime; name="smime.p7m"; smime-type=enveloped-data
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; filename="smime.p7m"
+Content-Description: S/MIME Encrypted Message
+
+MIAGCSqGSIb3DQEHA6CAMIACAQAxggLmMIIBbwIBADBXMFIxCzAJBgNVBAYTAkFVMRMwEQYD
+VQQIDApTb21lLVN0YXRlMSEwHwYDVQQKDBhJbnRlcm5ldCBXaWRnaXRzIFB0eSBMdGQxCzAJ
+BgNVBAMMAkNBAgEDMA0GCSqGSIb3DQEBAQUABIIBADn4My5GnymVuhP1lGrCiDZwYp3gq7XI
+fdBeQIE3mKKh8Vw5VbPpLLrqEHOlatFSvhDECI6yQTLBHZ5uINt8je5blgXIcusxuIpJmokl
+l9P2aPBNAOFXDuPP0sofqyuM7rPJuuSmkBkG+DLHQmnKHhgPZsielNAQXRmXVpcOD/FnTeGx
+ob6qz4vCliTPn7oEZCW6VkrLnoR6qohNIwB3QoXXQOJTPPN8H8JVDzssh8j/acVGEnEHL76r
+lmS9XHhoqvG8SXhnt95oM/n4mzkJS2Af17rv4+VMDC+xJFdW+c9U5O8s7KxbkefpdOseJs9U
+4wTvJgF93nzw1MybyZRx3p8wggFvAgEAMFcwUjELMAkGA1UEBhMCQVUxEzARBgNVBAgMClNv
+bWUtU3RhdGUxITAfBgNVBAoMGEludGVybmV0IFdpZGdpdHMgUHR5IEx0ZDELMAkGA1UEAwwC
+Q0ECAQQwDQYJKoZIhvcNAQEBBQAEggEAuTwHuz7ff/wtL56KeMiAnOYIpT9tW1+rdnNwoig4
+LimDFS6jU3RoPzQtvJB2Ia4UtUDt/pF/S2FDG7cjb0J1PH9zco2afR/UIe0miyVzXW+cn1rr
+NXXUL4qu3tubd9luTOQoVoxZ9DY5tW/9jwLmSyJWj+QBBTeo1zhim2cBnIyjRoOqdykuLHke
+xbbSCLkjrinS3S1+7aKdrP6vrVFDknkqUSfuzaSEKvpMzLuHctWehuQ61qfjFk8RcovSdyyZ
+EvruQXeHUUREluYPRfHIocz+CSrvqeOJtIpcjYi+sjYXsBk7HLIVmEsJ1skxL61Bz6lpSci+
+wbBQXx8yPbp5WTCABgkqhkiG9w0BBwEwFAYIKoZIhvcNAwcECBR+XZ8GiVw4oIAEggxojZvZ
+7916XXlwxM+E4uBCE+HSkb3yIOiWdtUKxT/28CEiW6P5gaOcYHOdVWZc7CJMeA8zIGgph94M
+8Wqt2+IhoEJmY5NNbgbCynjJmwPU74g9BN01kiJBF+J+SdYkuThwmpeu8eq346UZtFHMBarZ
+8WapMLcpGFItTwmqIj9uSEnTUP1XHkOQAgLxXZDK/tPMnTPht/2RponDgCfPBqR4I62+ZEEu
+8qWFTtahQ4Vk4zqVfzvo9peL3QOkMDBtokGvlb984SMHFbBJdeGgVHO99s8/l7iCwNPdGMz1
+NpBJy+fgsJu6MoVRKCfNfqkBpFuiMMiDD0+aDqjZCLfVlxH3oKu9Ax/ZQ+bEKcIZKAVZBSt/
+tnNK8tmnmZLmXFJxJyBLfx5mzOZSx1dNTd04BPTxAXCpZxXIOHL/I9Ibsh89lV9d/6QQlxQJ
+BhdICLKuCVfTsGuuNRSlnzMQ/28+UmNIeperKHxBSO5mPdsh0ycCqu/j+OCnPbKjwM9TRwrR
+g+DVFfytgvXDhVzVXpIBieIrCLDiHPGTg6IFXOG97WPbtUG7gPqZZqZMpo/6MlUeqD1DhrN2
+pjWSBpZ4OKiOFo8gl4K7DSHsp4EPoa0x0m3duJzHJsFDN4ezizwVAhoofRs/H7tVl25GO2m+
+wEJq+qyB+70m67lgk+/X3Eb535IQzbsB/r80Wm1z+OwL/D+o/tFRHzWeW7BuEsgU6yXJQeIG
+hiEv8T8j5UdFKYsJLPeXc4PS6ps7rdRSur93rWvHHU1M9U3iuQhBYQRD3T0FvQES56P8Car4
+0yrb2dqpoPDDDPjbzMaV7nMzV5bbRKeNBE/yUpGJ5W9BZHLGdMDXBWGfT8Kd5eR7NiDVjq+4
+HkRJfD+oPE4priqnRmlQ97YpnonrxiXrLRBBd6jrm6AaNKPeFM3GqdztkcG3hovDdwtzRRSJ
+lRFaXVPc/7v8OOHJYGUCYBdJsoZ7wUkhUJxF7nkUGYxeEPMWDBeftNq/K8uxI3DyWulTwxyB
+TkuOfSQxek5tqs8hwgVFbJUnOTOHMf66nU2C9oTwXcTHUH7wf3bzTkDD5zr+jfY1wuScQkoe
+g8dYLBTrPXvHftCB+set062aNlF8+rmqwwTaDgxgQPhUupA6FIFuKATdHoL7blTfiRtxBdOM
+ZOJgxGHRfp4L3x2v2ohhO5iLlrGnNv77IaFWYjJJOk0Sz8wXJAxDmWmQp166fnzWHoZ1rrY8
+k/z9D8353RSgWCpZE8ry8HN3jHGblRztcpeLmvW5cTioW8XN+17FyvWDWk1vDE/zASIGeYDa
+m7axLwfToONMaLda3mrzFpYfphvM05Q/AHR5E+unn0Ly2JOVrxQL0N1wHkpQZivKYbtPiSRt
+a8+YvINEFnuaNTuAZTNTjmHY44Q/dpbSldU/zcp+FSt3yZCi+wM1QGqj+M+Ke9euqcqDfmC3
+5m8qSFaWlhb3QawjdYx+QFEm0MdAVy0TweU7X1JpLmKu7S+TtdUvU2u6zCgbFzg6rd9CBDYd
+iOUI799KsOEs5IPZf6hCk/mKkpZ8H11SOW9KNHOYGoUI26xM/puDLy8Rhd9sEEhrtiwZTQ5I
+sCkYvckvYxjSj5jGby1QufaDlPQ/UnJIj1c4Vtg4QtkLvzdyHvHc+MabIk2357SPCUvuEH2F
+9Zz+hXFCNuJKA+nSPbLO4dioAtl/bMv42kyT2a9iz71g9tNua2hfAUDO3Uru+CmeLrNzbaKm
+AoCXvvDYQx7YkIxWAac50X6lCZpO7WVIjyXgGpobS08jQDpEkrNy3tjz81QcQpsVF5lTC3ae
+VV9+UDHnS1tWZuZx4bmDbPtAM89sonuYAVOxnxLgC5sSkGFOvsijjU6RF0nkl2de6I2Xuh6I
+E3mHfa/b8kibf5uea0GJun5siGPx2LxFYCLqaNonOz9YdbIx+gb7LJQgreYJRUY8PeoacXvC
+UMxLeLW6XekBDRZJrrBFLJLntufBOLbXoKzZWO7XzjhZabqcBPHPB5MWvaDQWKDXcFqFl0nn
+oCVHqzucvytsNSo30uFha+GUNxreCQAHBvoemslw+WWC+CD4/3xsfX64g8QgcYgCKztmKKWg
++2gkMqrWHaigmWwFd2XdPZoE6I9AedrezksFN4theEtuMJcMQCug3Q9mShdXUCvNbmuEJkMt
+XfW1X+WvWxZnsrANmL0WiCvKhENsf89G1buHkedOg+4Aok4RyjN7Lg6tvzuiazn58G5c8cS+
+gXyNVkEKxTAMO9GxYHi6wOBNUya5EiIu0YP6gmixAn3C1r/7uNu1ku3fRHsHVbHBrk00GgWN
+wD0tytX6wkuorjuTev4UUBBffmO32kqDKgj/u84MqZcKHidf4qkd3NI2Z5svtFUsuZbbtXNt
+rH/VIa2LA4U3nWf7JWwXmRuJgCCVGdAvdUftHXBM7RI5LY9ljKpdHgsy40LX/kk/NKw1Ixp0
+BbBAGtuEzMYkRGmWHD4JYKL2yJPXA0YIiou4rGzn6uHvdTAwZhOLSBVcOkjEJAahq5IBl6xb
+WN+SJVotvhZWui0K4UMs/WBKXPMnPrMro3S8F0B9XknL0Yeilj/x1CNfAZWqTWVhxsQKu+Q9
++8XT7Aga0LdDywVXkVut8YOzar/Iz+byRCTdy1IlNx5d1c98TbQnXcVig8q6Y45XyqEtw7j6
+rje2VUc1o1e22gHRqR/nGHc190GofQcg1RNGYPvWvVy8isbZBVwus0Fg5i/D80YSWvtjpbGQ
+KdN1CYm8YKj2oZzqjaOnCczTn3gKsUth2jXO6/Z4Pc8x+tRvbGD/cD0W+h7v2Hi1+XAuFNdD
+7t3H4h3K3CiE0HKf9RLr6tFkpekw1miRdeVrxWtVMK8Ze7SPHReom8xsFOE3I/LIAuSl132P
+hfTFhwb1fXtd/uEIgy8NSnt9rOImVZpTE12CrUL72eIv8e6oksmL4r1/SfTBRKUJPB59Ywdv
+tbfphEATbuba1itudQjvabkx9WmIeAq2XzxLhO5R6e5x0OxWMxGQv7QHd4qcRVUo3vqa0qFV
+9qoiTL6YSygS/gLrSHPDyHJe5c1Wc5F+cl3RDicBio5gYKSIIVDYSRt24owXhcMpcU2xlS4T
+i553suC+f5vqEhUYajUSqFs6Ax6/V4RzSJXDdmy3C9w/8A7flMNk+ICHTQ7j3qMdDi0lgZ91
+QVrzfZbl2hv1CXSwURBb5Z7xf0x2GQZqntsEo/klMF2tiCrV+Kbl36pQ5M5ZLDkw55QpqhrN
+hhNK7nj9P+GSktfHGdL37eTmda5THlfeNuhhOHmjkuNyZMqaym8PWMgTFN26Xp30CE7OZZWs
+NKwwjE0l2HrRHnu7kU8OUdIWFjTdQ2wAp3zMMOt8dn0di6KVK+yIVgfIQbtGjuQj1okrD5CL
+JFW3jOEMBro04S9MGWwlRI/1X+Tl0rzOqELqt5hAP3XRnyUDLuxkOo5+gqF6pSZPhEpWOlAZ
+eEB4cRMwV0DIr7kRTPE7n/VYWu/l8kRWB5/K78E1rAO4x1kaQmTkHsDZHEhWSH+zlOGh0jxj
+AuQ56S11FT9htdOcWjFmNhURRVaXMFhrCPGYZFB0kPnE53GxbDV32by45sU3ZMXXrKj76gfr
+9jWULbP3XBnH74f6QTF6AycK4M78T5luwo2iNpKj2QIQzXAiLcNXUSv62xWhIs5MKhmmJeqA
+uPnoqa6xvKSOuYr+V26p1M8hlyEyll//8kGt5hcIICzYffkTGYr/bnn8tGTruDOMrGJdGTU5
+fnomRIorSi8Rng4eyDjD+gJbgGoC+j6bOw6Iqolk2wh9kQim2RYnn2ll2hcjZucTe6f4/TG4
+lna10LJOGef6Tz95C8ikleODZMwD6sX7vZIQ5xYex6qNiTlkT6qt8HCBv+W+GnyPDH/tLF9g
+hOs5XvViedhr3NSWCLwWXFlyGPI4onyVP3Sa1K+zwVXPY/j/v8VaN8hE9EORZmwP3wd4HN6/
+MEBpFgF9rrBPhdsa3T798KEQGrFQDp4JvaAwTKxis0wEpxeKXwSZ+CD95yvR0Cglif1Fzgw5
+gHV9AtifKASxU/hApDNyYCatbz239DDabk6M+s002pSL+n2xSYtnbvsm8nm7CyZ6UA1M7oEy
+yAzgOK1/c9KZf2D2/Z1ajcMR4VOik4ZXmJJigrAboNW6mvcrDmYAwTOwHbS1/zI62mEBQw6+
+VoofOdwIIhVm55ieSAh364i0cyfraUrtMnKcuPBE//rNrGXkNQVo5PMECM9pJ+kRJHHbAAAA
+AAAAAAAAAA==
+.
+250 2.0.0 Ok: queued as C088420E41
+QUIT
+221 2.0.0 Bye
+
+---------------------------------------------
+
+Conversación firmada y encriptada en formato ASCII
+
+220 debian ESMTP Postfix (Debian/GNU)
+EHLO host1.lab.ser
+250-debian
+250-PIPELINING
+250-SIZE 10240000
+250-VRFY
+250-ETRN
+250-ENHANCEDSTATUSCODES
+250-8BITMIME
+250 DSN
+MAIL FROM:<ana@mailserver.lab.ser> SIZE=6004
+250 2.1.0 Ok
+RCPT TO:<benito@mailserver.lab.ser>
+250 2.1.5 Ok
+DATA
+354 End data with <CR><LF>.<CR><LF>
+To: benito@mailserver.lab.ser
+From: Ana Gil Molina <ana@mailserver.lab.ser>
+Subject: Entrega4
+Message-ID: <5ED145EB.9060706@mailserver.lab.ser>
+Date: Fri, 29 May 2020 19:27:07 +0200
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:38.0) Gecko/20100101
+ Icedove/38.7.0
+MIME-Version: 1.0
+Content-Type: application/pkcs7-mime; name="smime.p7m"; smime-type=enveloped-data
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; filename="smime.p7m"
+Content-Description: S/MIME Encrypted Message
+
+MIAGCSqGSIb3DQEHA6CAMIACAQAxggLmMIIBbwIBADBXMFIxCzAJBgNVBAYTAkFVMRMwEQYD
+VQQIDApTb21lLVN0YXRlMSEwHwYDVQQKDBhJbnRlcm5ldCBXaWRnaXRzIFB0eSBMdGQxCzAJ
+BgNVBAMMAkNBAgEDMA0GCSqGSIb3DQEBAQUABIIBADn4My5GnymVuhP1lGrCiDZwYp3gq7XI
+fdBeQIE3mKKh8Vw5VbPpLLrqEHOlatFSvhDECI6yQTLBHZ5uINt8je5blgXIcusxuIpJmokl
+l9P2aPBNAOFXDuPP0sofqyuM7rPJuuSmkBkG+DLHQmnKHhgPZsielNAQXRmXVpcOD/FnTeGx
+ob6qz4vCliTPn7oEZCW6VkrLnoR6qohNIwB3QoXXQOJTPPN8H8JVDzssh8j/acVGEnEHL76r
+lmS9XHhoqvG8SXhnt95oM/n4mzkJS2Af17rv4+VMDC+xJFdW+c9U5O8s7KxbkefpdOseJs9U
+4wTvJgF93nzw1MybyZRx3p8wggFvAgEAMFcwUjELMAkGA1UEBhMCQVUxEzARBgNVBAgMClNv
+bWUtU3RhdGUxITAfBgNVBAoMGEludGVybmV0IFdpZGdpdHMgUHR5IEx0ZDELMAkGA1UEAwwC
+Q0ECAQQwDQYJKoZIhvcNAQEBBQAEggEAuTwHuz7ff/wtL56KeMiAnOYIpT9tW1+rdnNwoig4
+LimDFS6jU3RoPzQtvJB2Ia4UtUDt/pF/S2FDG7cjb0J1PH9zco2afR/UIe0miyVzXW+cn1rr
+NXXUL4qu3tubd9luTOQoVoxZ9DY5tW/9jwLmSyJWj+QBBTeo1zhim2cBnIyjRoOqdykuLHke
+xbbSCLkjrinS3S1+7aKdrP6vrVFDknkqUSfuzaSEKvpMzLuHctWehuQ61qfjFk8RcovSdyyZ
+EvruQXeHUUREluYPRfHIocz+CSrvqeOJtIpcjYi+sjYXsBk7HLIVmEsJ1skxL61Bz6lpSci+
+wbBQXx8yPbp5WTCABgkqhkiG9w0BBwEwFAYIKoZIhvcNAwcECBR+XZ8GiVw4oIAEggxojZvZ
+7916XXlwxM+E4uBCE+HSkb3yIOiWdtUKxT/28CEiW6P5gaOcYHOdVWZc7CJMeA8zIGgph94M
+8Wqt2+IhoEJmY5NNbgbCynjJmwPU74g9BN01kiJBF+J+SdYkuThwmpeu8eq346UZtFHMBarZ
+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
+AAAAAAAAAA==
+.
+250 2.0.0 Ok: queued as C088420E41
+QUIT
+221 2.0.0 Bye
+
+---------------------------------------------
+---------------------------------------------
+
+Entrega 5
+
+Content Type de la entrega 3:
+Content-Type: text/plain; charset=utf-8; format=flowed
+Content Type de la entrega 4:
+Content-Type: application/pkcs7-mime; name="smime.p7m"; smime-type=enveloped-data
+
+En en el caso de la entrega 3, claramente se puede ver que el tipo de contenido de la conversación
+es de tipo texto plano codificado en UTF-8. En la entrega 4, al hacer uso de SMIME para la encriptación y la firma de los emails, se puede ver que el contenido es de tipo pkcs7-mime, y que el que tipo de smime usado es "enveloped" que significa encapsulado. 
+

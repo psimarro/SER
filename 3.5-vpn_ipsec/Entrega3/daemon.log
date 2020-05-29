@@ -1,0 +1,67 @@
+...
+
+
+May  4 20:03:50 debian charon: 04[NET] received packet: from 2.2.2.2[500] to 1.1.1.1[500]
+May  4 20:03:50 debian charon: 04[ENC] parsed IKE_SA_INIT request 0 [ SA KE No N(NATD_S_IP) N(NATD_D_IP) ]
+May  4 20:03:50 debian charon: 04[IKE] no IKE config found for 1.1.1.1...2.2.2.2, sending NO_PROPOSAL_CHOSEN
+May  4 20:03:50 debian charon: 04[ENC] generating IKE_SA_INIT response 0 [ N(NO_PROP) ]
+May  4 20:03:50 debian charon: 04[NET] sending packet: from 1.1.1.1[500] to 2.2.2.2[500]
+May  4 20:03:55 debian charon: 00[DMN] signal of type SIGINT received. Shutting down
+May  4 20:03:58 debian charon: 00[DMN] Starting IKEv2 charon daemon (strongSwan 4.5.2)
+May  4 20:03:58 debian charon: 00[KNL] listening on interfaces:
+May  4 20:03:58 debian charon: 00[KNL]   eth0
+May  4 20:03:58 debian charon: 00[KNL]     10.0.2.15
+May  4 20:03:58 debian charon: 00[KNL]     fe80::a00:27ff:fe77:b5cb
+May  4 20:03:58 debian charon: 00[KNL]   eth1
+May  4 20:03:58 debian charon: 00[KNL]     192.168.1.2
+May  4 20:03:58 debian charon: 00[KNL]     fe80::a00:27ff:fe02:9171
+May  4 20:03:58 debian charon: 00[KNL]   eth2
+May  4 20:03:58 debian charon: 00[KNL]     1.1.1.1
+May  4 20:03:58 debian charon: 00[KNL]     fe80::a00:27ff:fe5f:2dc9
+May  4 20:03:58 debian charon: 00[CFG] loading ca certificates from '/etc/ipsec.d/cacerts'
+May  4 20:03:58 debian charon: 00[CFG] loading aa certificates from '/etc/ipsec.d/aacerts'
+May  4 20:03:58 debian charon: 00[CFG] loading ocsp signer certificates from '/etc/ipsec.d/ocspcerts'
+May  4 20:03:58 debian charon: 00[CFG] loading attribute certificates from '/etc/ipsec.d/acerts'
+May  4 20:03:58 debian charon: 00[CFG] loading crls from '/etc/ipsec.d/crls'
+May  4 20:03:58 debian charon: 00[CFG] loading secrets from '/etc/ipsec.secrets'
+May  4 20:03:58 debian charon: 00[CFG] expanding file expression '/var/lib/strongswan/ipsec.secrets.inc' failed
+May  4 20:03:58 debian charon: 00[CFG]   loaded IKE secret for %any
+May  4 20:03:58 debian charon: 00[CFG] sql plugin: database URI not set
+May  4 20:03:58 debian charon: 00[LIB] plugin 'sql': failed to load - sql_plugin_create returned NULL
+May  4 20:03:58 debian charon: 00[CFG] loaded 0 RADIUS server configurations
+May  4 20:03:58 debian charon: 00[LIB] plugin 'medsrv' failed to load: /usr/lib/ipsec/plugins/libstrongswan-medsrv.so: cannot open shared object file: No such file or directory
+May  4 20:03:58 debian charon: 00[CFG] mediation client database URI not defined, skipped
+May  4 20:03:58 debian charon: 00[LIB] plugin 'medcli': failed to load - medcli_plugin_create returned NULL
+May  4 20:03:58 debian charon: 00[LIB] plugin 'nm' failed to load: /usr/lib/ipsec/plugins/libstrongswan-nm.so: cannot open shared object file: No such file or directory
+May  4 20:03:58 debian charon: 00[CFG] HA config misses local/remote address
+May  4 20:03:58 debian charon: 00[LIB] plugin 'ha': failed to load - ha_plugin_create returned NULL
+May  4 20:03:58 debian charon: 00[DMN] loaded plugins: test-vectors curl ldap aes des sha1 sha2 md5 random x509 revocation constraints pubkey pkcs1 pgp pem openssl fips-prf gmp agent pkcs11 xcbc hmac ctr ccm gcm attr kernel-netlink resolve socket-raw farp stroke updown eap-identity eap-aka eap-md5 eap-gtc eap-mschapv2 eap-radius eap-tls eap-ttls eap-tnc dhcp led addrblock 
+May  4 20:03:58 debian charon: 00[JOB] spawning 16 worker threads
+May  4 20:03:58 debian charon: 11[CFG] received stroke: add connection 'secret'
+May  4 20:03:58 debian charon: 11[CFG] added configuration 'secret'
+May  4 20:03:58 debian charon: 11[CFG] received stroke: initiate 'secret'
+May  4 20:03:58 debian charon: 11[IKE] initiating IKE_SA secret[1] to 2.2.2.2
+May  4 20:03:58 debian charon: 11[ENC] generating IKE_SA_INIT request 0 [ SA KE No N(NATD_S_IP) N(NATD_D_IP) ]
+May  4 20:03:58 debian charon: 11[NET] sending packet: from 1.1.1.1[500] to 2.2.2.2[500]
+May  4 20:03:58 debian charon: 04[NET] received packet: from 2.2.2.2[500] to 1.1.1.1[500]
+May  4 20:03:58 debian charon: 04[ENC] parsed IKE_SA_INIT response 0 [ SA KE No N(NATD_S_IP) N(NATD_D_IP) N(MULT_AUTH) ]
+May  4 20:03:58 debian charon: 04[IKE] authentication of '1.1.1.1' (myself) with pre-shared key
+May  4 20:03:58 debian charon: 04[IKE] establishing CHILD_SA secret
+May  4 20:03:58 debian charon: 04[ENC] generating IKE_AUTH request 1 [ IDi N(INIT_CONTACT) IDr AUTH SA TSi TSr N(MOBIKE_SUP) N(ADD_4_ADDR) N(ADD_4_ADDR) N(MULT_AUTH) N(EAP_ONLY) ]
+May  4 20:03:58 debian charon: 04[NET] sending packet: from 1.1.1.1[4500] to 2.2.2.2[4500]
+May  4 20:03:58 debian charon: 03[NET] received packet: from 2.2.2.2[4500] to 1.1.1.1[4500]
+May  4 20:03:58 debian charon: 03[ENC] parsed IKE_AUTH response 1 [ IDr AUTH SA TSi TSr N(AUTH_LFT) N(MOBIKE_SUP) N(ADD_4_ADDR) ]
+May  4 20:03:58 debian charon: 03[IKE] authentication of '2.2.2.2' with pre-shared key successful
+May  4 20:03:58 debian charon: 03[IKE] IKE_SA secret[1] established between 1.1.1.1[1.1.1.1]...2.2.2.2[2.2.2.2]
+May  4 20:03:58 debian charon: 03[IKE] scheduling reauthentication in 9929s
+May  4 20:03:58 debian charon: 03[IKE] maximum IKE_SA lifetime 10469s
+May  4 20:03:58 debian charon: 03[IKE] CHILD_SA secret{1} established with SPIs cadb55b2_i c07d8260_o and TS 192.168.1.0/24 === 192.168.2.0/24 
+May  4 20:03:58 debian charon: 03[IKE] received AUTH_LIFETIME of 9966s, scheduling reauthentication in 9426s
+May  4 20:03:58 debian charon: 03[IKE] peer supports MOBIKE
+May  4 20:04:51 debian charon: 06[CFG] received stroke: initiate 'secret'
+May  4 20:04:51 debian charon: 05[IKE] establishing CHILD_SA secret
+May  4 20:04:51 debian charon: 05[ENC] generating CREATE_CHILD_SA request 2 [ SA No TSi TSr ]
+May  4 20:04:51 debian charon: 05[NET] sending packet: from 1.1.1.1[4500] to 2.2.2.2[4500]
+May  4 20:04:51 debian charon: 11[NET] received packet: from 2.2.2.2[4500] to 1.1.1.1[4500]
+May  4 20:04:51 debian charon: 11[ENC] parsed CREATE_CHILD_SA response 2 [ SA No TSi TSr ]
+May  4 20:04:51 debian charon: 11[IKE] CHILD_SA secret{2} established with SPIs cd694d89_i cdcea5ab_o and TS 192.168.1.0/24 === 192.168.2.0/24 

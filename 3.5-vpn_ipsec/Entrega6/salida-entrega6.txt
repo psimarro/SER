@@ -1,0 +1,74 @@
+----------------------------------------------------------------------------------
+----------------------------------------------------------------------------------
+
+usuario@debian:~$ sudo ip xfrm policy
+src 192.168.2.0/24 dst 192.168.1.0/24 
+	dir fwd priority 1859 ptype main 
+	tmpl src 2.2.2.2 dst 1.1.1.1
+		proto esp reqid 2 mode tunnel
+src 192.168.2.0/24 dst 192.168.1.0/24 
+	dir in priority 1859 ptype main 
+	tmpl src 2.2.2.2 dst 1.1.1.1
+		proto esp reqid 2 mode tunnel
+src 192.168.1.0/24 dst 192.168.2.0/24 
+	dir out priority 1859 ptype main 
+	tmpl src 1.1.1.1 dst 2.2.2.2
+		proto esp reqid 2 mode tunnel
+src ::/0 dst ::/0 
+	socket out priority 0 ptype main 
+src ::/0 dst ::/0 
+	socket in priority 0 ptype main 
+src 0.0.0.0/0 dst 0.0.0.0/0 
+	socket out priority 0 ptype main 
+src 0.0.0.0/0 dst 0.0.0.0/0 
+	socket in priority 0 ptype main 
+src 0.0.0.0/0 dst 0.0.0.0/0 
+	socket out priority 0 ptype main 
+src 0.0.0.0/0 dst 0.0.0.0/0 
+	socket in priority 0 ptype main 
+src 0.0.0.0/0 dst 0.0.0.0/0 
+	socket out priority 0 ptype main 
+src 0.0.0.0/0 dst 0.0.0.0/0 
+	socket in priority 0 ptype main 
+src ::/0 dst ::/0 
+	socket in priority 0 ptype main 
+src ::/0 dst ::/0 
+	socket out priority 0 ptype main 
+src ::/0 dst ::/0 
+	socket in priority 0 ptype main 
+src ::/0 dst ::/0 
+	socket out priority 0 ptype main 
+src ::/0 dst ::/0 
+	socket in priority 0 ptype main 
+src ::/0 dst ::/0 
+	socket out priority 0 ptype main 
+src 0.0.0.0/0 dst 0.0.0.0/0 
+	socket in priority 0 ptype main 
+src 0.0.0.0/0 dst 0.0.0.0/0 
+	socket out priority 0 ptype main 
+src 0.0.0.0/0 dst 0.0.0.0/0 
+	socket in priority 0 ptype main 
+src 0.0.0.0/0 dst 0.0.0.0/0 
+	socket out priority 0 ptype main 
+src 0.0.0.0/0 dst 0.0.0.0/0 
+	socket in priority 0 ptype main 
+src 0.0.0.0/0 dst 0.0.0.0/0 
+	socket out priority 0 ptype main
+
+----------------------------------------------------------------------------------
+----------------------------------------------------------------------------------
+
+usuario@debian:~$ sudo ip xfrm state
+src 1.1.1.1 dst 2.2.2.2
+	proto esp spi 0xc0b9db0d reqid 2 mode tunnel
+	replay-window 32 flag af-unspec
+	auth-trunc hmac(sha256) 0xcc982cb79427730d0c5ddb166957bd7fd1f7eb3808c4ae9da7971d18950aae5c 128
+	enc cbc(aes) 0x2645de09ddb1a096d5b8bfe78e094e42
+src 2.2.2.2 dst 1.1.1.1
+	proto esp spi 0xcdbcc102 reqid 2 mode tunnel
+	replay-window 32 flag af-unspec
+	auth-trunc hmac(sha256) 0x29c66fc8f25e1a996b63ccbbace540f2a2e938a3c0fce43608c7d09412f3bf54 128
+	enc cbc(aes) 0x08ec31883c1bdc5c0455049fa2bc32d8
+
+----------------------------------------------------------------------------------
+----------------------------------------------------------------------------------

@@ -1,0 +1,6 @@
+1) Cliente -> Version: TLS 1.1 (0x0302)
+2) Cliente -> Cipher Suites (14 suites)
+3) Servidor -> Version: TLS 1.1 (0x0302)
+4) Servidor -> Cipher Suite: TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (0xc013)
+5) Servidor -> Algorithm Id: 1.2.840.113549.1.1.5 (shaWithRSAEncryption)
+6) Clave EC Diffie-Hellamn -> Pubkey Length: 65
